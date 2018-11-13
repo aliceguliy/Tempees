@@ -1,0 +1,300 @@
+*,
+*:before,
+*:after  {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: /*#f7f9fc*/ #dbcee6 url(../images/bg-main.png);;
+	color: #000;
+	font: 300 13px/1.5 'Roboto', sans-serif;
+}
+
+img {
+border: 0;
+}
+
+a {
+	color: #5c6bc0;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.page {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.top-section {
+	background: #6d5384 url(../images/bg-top.png);
+	padding: 0 0 94px;
+}
+
+.header {
+	overflow: hidden;
+	padding: 40px 0;
+}
+
+.logo {
+	float: left;
+}
+
+.nav {
+	float: right;
+}
+
+.nav ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav li {
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.nav li a {
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #9884aa;
+	border-radius: 4px;
+	width: 140px;
+	padding: 15px 10px;
+	font: 900 18px/23px 'Montserrat', sans-serif;
+	display: block;
+	text-align: center;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.nav li a:after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 8px 0 8px;
+	border-color: #f7df59 transparent transparent transparent;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	visibility: hidden;
+	/*opacity: 0;
+	transition: all 0.3s ease 0.3s;*/
+}
+
+.nav li a:hover {
+	background: #f7df59;
+	border: #f7df59;
+	box-shadow: 0 2px 2px 2px #4c2f65;
+}
+
+.nav li a:hover:after {
+	visibility: visible;
+	top: 100%;
+	opacity: 1;
+}
+
+.visual-section {
+	color: #fff;
+}
+
+.visual-section h1 {
+	letter-spacing: -3px;
+	color: #fff;
+	font: 900 112px/1 'Montserrat', sans-serif;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	border-bottom: 2px solid #9884aa;
+	padding: 0 0 25px;
+	margin: 0 0 25px;
+}
+
+.visual-section h1 span {
+	color: #ead7fb;
+}
+
+.visual-section h1 strong {
+	font-size: 34px;
+	display: block;
+	line-height: 1.2;
+	letter-spacing: -1px;
+}
+
+.slider {
+	width: 850px;
+	margin: 0 auto 40px; 
+	font: 100 28px/1.2 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+.slider p {
+	margin: 0 0 40px 30px;
+}
+
+.plagination {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.plagination li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 3px;
+}
+
+.plagination li a {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 1px 1px 3px rgba(0 0 0 0.3);
+	position: relative;
+}
+
+.plagination li.active a {
+	background: #443255;
+	box-shadow: none;
+}
+
+.plagination li.active a:after {
+	content: "";
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	border: 1px solid #443255;
+	top: -2px;
+	left: -2px;
+	border-radius: 50%;
+}
+
+.btn-holder {
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	width: 140px;
+	border: 1px solid #9884aa;
+	border-radius: 4px;
+	font-weight: 900;
+	font-size: 18px;
+	color: #fff;
+	line-height: 23px;
+	padding: 15px 0;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	margin: 0 5px 3px;
+	box-sizing: content-box;
+}
+
+.btn:hover {
+	text-decoration: none;
+	background: #69c7e2;
+	margin-bottom: 0;
+	border: 0;
+	padding: 16px 1px;
+	border-bottom: 3px solid #432d57; 
+}
+
+.main-section {
+	padding: 60px 0;
+
+}
+
+.column-holder:after {
+	content: "";
+	clear: both; /*clear fix*/
+	display: block;
+}
+
+.column {
+	float: left;
+	position: relative;    /*задаем позиции для блоков и прописываем тени*/
+	background: #fff;
+	width: 340px;
+	margin: 0 0 0 60px;
+	padding: 20px;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+}
+
+.column-big {
+	margin: 0 0 65px 0;
+	width: auto; 
+	float: none; 
+}
+
+.column-big p {
+	color: #6d5384;
+}
+
+.column:before,
+.column:after {
+	content: "";    /*здесь мы делаем эффект книжечки*/
+	position: absolute;
+	height: 8px;
+	background: #fff;
+	bottom: 2px;
+	left: 0;
+	right: 0;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+}
+
+.column:after {
+	bottom: 4px;    /*здесь мы делаем эффект книжечки*/
+}
+
+.column:first-child {
+	margin-left: 0;
+}
+
+.section-header h1 {
+	color: #654d7b;
+	font: 100 60px/1.2 'Roboto', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	
+}
+
+.section-header h2 {
+	color: #fff;
+	font: 500 30px/1.2 'Roboto', sans-serif;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 75px;
+}
+
+
+.footer {
+	display: block;
+	border-top: 2px solid #6d5384;
+	margin-top: 45px;
+	color: #6d5384;
+}
+	
+.info-1 {
+	float: left;
+}
+
+.info-2 {
+	float: right;
+}
+
